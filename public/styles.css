@@ -42,6 +42,7 @@ h1 {
 
 p {
     font-size: 1.2em;
+    margin-top: 20px;
 }
 
 section {
@@ -138,12 +139,12 @@ body::before {
     margin-top: 30px;
 }
 
-img {
+.img-profil {
     border-radius:50%;
     width: 400px;
     height: 400px;
     object-fit: cover;
-    object-position: center center;
+    object-position: center 30%;
 }
 h1 {
     text-align: center;
@@ -222,8 +223,18 @@ h1 {
    font-size: 18px;
   }
 
-
-
+.project {
+    display: flex;
+    align-items: start;
+}
+.container-project {
+    margin: 50px 50px;
+}
+article {
+    width: 20em;
+    font-size: larger;
+    padding-left: 20px;
+}
 
 
 
