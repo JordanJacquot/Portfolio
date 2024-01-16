@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title>Jacquot Jordan - Développeur Web</title>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <script src="./scrollama.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://unpkg.com/gsap@3.9.0/dist/gsap.min.js"></script>
+</head>
+<body>
+    <header>
+        
+        <div class="container-title">
+            <img src="./images/jj2-compressed.jpg" alt="Jordan Jacquot">
+            <h1>Jacquot Jordan</h1>
+            <p>Développeur Web</p>
+        </div>
+        <body>
+            <!-- ... Autres balises body ... -->
+        
+            <div class="attention-banner">
+                <strong> Actuellement en recherche d'alternance pour le titre professionnel Concepteur Développeur d'Application.</strong>
+            </div>
+        
+        
+            <!-- ... Autres sections ... -->
+        </body>
+        
+    </header>
+
+    <section id="about" class="container">
+        <h2>Qui suis-je?</h2>
+        <h3>Mes débuts dans le développement web</h3>
+<div id="timeline">
+  <div></div>
+  <section>
+    <div>
+      <img src="http://placehold.it/50x50"/>
+    </div>
+    <div>
+      <h2>Lets Talk</h2>
+      <h3>We'll have a chat in person, over the phone or email so that I can find out your goals and what you want from the website.</h3>
+    </div>
+  </section>
+  
+  <section>
+    <div>
+      <img src="http://placehold.it/50x50"/>
+    </div>
+    <div>
+      <h2>Agreement</h2>
+      <h3>I'll create a project charter which states what I'm going to deliver. I'll then take a down-payment of 50%, with the remaining 50% to be paid once the project is complete.</h3>
+    </div>
+  </section>
+  
+  <section>
+    <div>
+      <img src="http://placehold.it/50x50"/>
+    </div>
+    <div>
+      <h2>Research</h2>
+      <h3>I need to know more about your business, so I'll ask plenty of questions. I'll research your sector and take a good look at your competitors; allowing me to ultimately make your website more successful than theirs.</h3>
+    </div>
+  </section>
+    <section>
+    <div>
+      <img src="http://placehold.it/50x50"/>
+    </div>
+    <div>
+      <h2>Prototyping</h2>
+      <h3>I'll create a draft of your website including the content and design. This is an iterative process where I'll work with you to make improvements and make sure you're happy with it.</h3>
+    </div>
+  </section>
+</div>
+       
+    </section>
+
+    <!-- ... (autres parties du HTML) ... -->
+
+    <section id="projects" class="container">
+        <h2>Projets</h2>
+        Des projets vont être disposés ici à l'avenir.
+    </section>
+
+    <section id="contact" class="container">
+        <h2>Contact</h2>
+        <form id="contactForm">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" required value="coco">
+        
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required value="feziufzi@gmail.com">
+        
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" required >toto</textarea>
+        
+            <button type="button" id="sendBtn">Envoyer</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Jacquot Jordan. Tous droits réservés.</p>
+        </div>
+        <section id="social" class="container">
+            <h2>Réseaux sociaux</h2>
+            <div>
+                <a href="https://github.com/JordanJacquot" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/jordan-jacquot-pro" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <!-- Ajoutez d'autres liens ici -->
+            </div>
+        </section>
+        
+    </footer>
+    <!-- Animation d'arrière plan -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            particlesJS("particles-js", {
+                particles: {
+                    number: { value: 100, density: { enable: true, value_area: 800 } },
+                    color: { value: "#ffffff" },
+                    shape: {
+                        type: "circle",
+                        stroke: { width: 0, color: "#000000" },
+                        polygon: { nb_sides: 5 },
+                        image: { src: "img/github.svg", width: 100, height: 100 }
+                    },
+                    opacity: { value: 0.5, random: false, anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false } },
+                    size: { value: 3, random: true, anim: { enable: false, speed: 40, size_min: 0.1, sync: false } },
+                    line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.4, width: 1 },
+                    move: {
+                        enable: true,
+                        speed: 6,
+                        direction: "none",
+                        random: false,
+                        straight: false,
+                        out_mode: "out",
+                        bounce: false,
+                        attract: { enable: false, rotateX: 600, rotateY: 1200 }
+                    }
+                },
+                interactivity: {
+                    detect_on: "canvas",
+                    events: { onhover: { enable: true, mode: "repulse" }, onclick: { enable: true, mode: "push" }, resize: true },
+                    modes: { grab: { distance: 400, line_linked: { opacity: 1 } }, bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 }, repulse: { distance: 200, duration: 0.4 }, push: { particles_nb: 4 }, remove: { particles_nb: 2 } }
+                },
+                retina_detect: true
+            });
+        });
+    </script>
+    
+    
+    <script src="app.js"></script>
+    <div id="particles-js"></div>
+</body>
+</html>
