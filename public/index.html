@@ -11,6 +11,7 @@
     <script src="./scrollama.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script src="https://unpkg.com/gsap@3.9.0/dist/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
 </head>
 <body>
     <header>
@@ -33,87 +34,121 @@
         
     </header>
 
-    <section id="about" class="container">
-        <h2>Qui suis-je?</h2>
-        <p>Je m'appelle Jordan et je suis développeur web junior. Issue de la formation Developpeur Web et Web Mobile de l'école de formation O'Clock. Ayant passé mon titre professionnel en Janvier,  </p>
-        <h3>Mes débuts dans le développement web</h3>
-<div id="timeline">
-  <div></div>
-  <section>
-    <div>
-      <img src="http://placehold.it/50x50"/>
-    </div>
-    <div>
-      <h2>Lets Talk</h2>
-      <h3>We'll have a chat in person, over the phone or email so that I can find out your goals and what you want from the website.</h3>
-    </div>
-  </section>
-  
-  <section>
-    <div>
-      <img src="http://placehold.it/50x50"/>
-    </div>
-    <div>
-      <h2>Agreement</h2>
-      <h3>I'll create a project charter which states what I'm going to deliver. I'll then take a down-payment of 50%, with the remaining 50% to be paid once the project is complete.</h3>
-    </div>
-  </section>
-  
-  <section>
-    <div>
-      <img src="http://placehold.it/50x50"/>
-    </div>
-    <div>
-      <h2>Research</h2>
-      <h3>I need to know more about your business, so I'll ask plenty of questions. I'll research your sector and take a good look at your competitors; allowing me to ultimately make your website more successful than theirs.</h3>
-    </div>
-  </section>
-    <section>
-    <div>
-      <img src="http://placehold.it/50x50"/>
-    </div>
-    <div>
-      <h2>Prototyping</h2>
-      <h3>I'll create a draft of your website including the content and design. This is an iterative process where I'll work with you to make improvements and make sure you're happy with it.</h3>
-    </div>
-  </section>
-</div>
-       
-    </section>
-
     <!-- ... (autres parties du HTML) ... -->
 
-    <section id="projects" class="container-project">
-        <h2 align="center">Mes projets</h2>
+    <section id="tabs" class="container">
+      <button class="tablinks" onclick="openTab(event, 'aboutTab')">Qui suis-je?</button>
+      <button class="tablinks" onclick="openTab(event, 'skillsTab')">Mes connaissances</button>
+      <button class="tablinks" onclick="openTab(event, 'timelineTab')">Timeline</button>
+      <button class="tablinks" onclick="openTab(event, 'projectsTab')">Mes Projets</button>
+      <button class="tablinks" onclick="openTab(event, 'contactTab')">Contact</button>
+      
+      
+      
+  
+      <div id="contactTab" class="tabcontent">
+          <!-- Contenu de l'onglet Contact -->
+          <form id="contactForm">
+            
+              <label for="name">Nom :</label>
+              <input type="text" id="name" name="name" required>
+          
+              <label for="email">Email :</label>
+              <input type="email" id="email" name="email" required>
+          
+              <label for="message">Message :</label>
+              <textarea id="message" name="message" required ></textarea>
+          
+              <button type="button" id="sendBtn">Envoyer</button>
+          
+          </form>
+      </div>
+      <div id="skillsTab" class="tabcontent">
+        <!-- Contenu de l'onglet Mes Connaissances -->
+        <h2>Mes Connaissances</h2>
+        <p>Voici toutes les technologies dont j'ai acquis des connaissances :</p>
+        <article>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/768px-HTML5_logo_and_wordmark.svg.png" alt="Logo HTML">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png" alt="Logo CSS">
+            <img src="https://i1.wp.com/www.keesmel.com/wp-content/uploads/2020/09/js-logo.png?fit=500%2C500" alt="Logo Javascript">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1200px-PHP-logo.svg.png" alt="Logo PHP">
+            <img src="https://logo-marque.com/wp-content/uploads/2020/11/WordPress-Logo.png" alt="Logo Wordpress">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Symfony2.svg/800px-Symfony2.svg.png" alt="Logo Symfony">
+            <!-- Ajoutez d'autres compétences si nécessaire -->
+        </article>
+    </div>
+      
+      <div id="projectsTab" class="tabcontent">
+          <!-- Contenu de l'onglet Mes Projets -->
+          <h2 align="center">Mes projets</h2>
           <h3>Projet Mélodica</h3>
           <div class="project">
-            <img src="./images/charte.png" alt="page d'accueil du projet Mélodica" class="img-melodica">
-            <article>C'est le projet présenté au jury pour le titre professionnel DWWM, réalisé durant le mois d'apothéose O'Clock, cette application va permettre d'améliorer la relation entre artistes amateurs (ou non) et organisateurs d'événements. Il est l'aboutissement d'un mois de durs labeurs mais est toujours en cours de développement</article>
+              <img src="./images/charte.png" alt="page d'accueil du projet Mélodica" class="img-melodica">
+              <article>C'est le projet présenté au jury pour le titre professionnel DWWM, réalisé durant le mois d'apothéose O'Clock, cette application va permettre d'améliorer la relation entre artistes amateurs (ou non) et organisateurs d'événements. Il est l'aboutissement d'un mois de durs labeurs mais est toujours en cours de développement.</article>
           </div>
-    </section>
+      </div>
+  
+      <div id="aboutTab" class="tabcontent">
+          <!-- Contenu de l'onglet Qui suis-je? -->
+          <p>Je m'appelle Jordan et je suis développeur web junior. 😊 Issue de la formation Développeur Web et Web Mobile de l'école de formation O'Clock. 🚀 J'habite dans le Grand-Est, plus particulièrement en Moselle.</p></br><p> Suite à mon passage au titre professionnel DWWM, on m'a convaincu de poursuivre les études. Je suis motivé à apprendre de nouvelles choses, calme, je sais être à l'écoute et j'aime particulièrement aider mes collègues, ce qui a fait de moi un élément central de mon projet au cours du mois d'apothéose O'Clock. N'hésitez pas à me contacter pour toute information complémentaire. 📬</p></br>
 
-    <section id="contact" class="container">
-        <h2>Me contacter</h2>
-        <form id="contactForm">
-            <label for="name">Nom :</label>
-            <input type="text" id="name" name="name" required value="coco">
-        
-            <label for="email">Email :</label>
-            <input type="email" id="email" name="email" required value="feziufzi@gmail.com">
-        
-            <label for="message">Message :</label>
-            <textarea id="message" name="message" required >toto</textarea>
-        
-            <button type="button" id="sendBtn">Envoyer</button>
-        </form>
-    </section>
+          <p>En dehors du développement web, j'apprécie également explorer de nouvelles technologies, travailler sur des projets innovants et élargir continuellement mes compétences. Mon objectif est de contribuer de manière significative à des projets stimulants et de collaborer avec des professionnels passionnés. Si vous avez des questions ou si vous souhaitez en savoir plus sur mon parcours, je suis à votre disposition ! 😊</p>
+
+          <!-- ... (le reste du contenu actuel) ... -->
+      </div>
+  
+      <div id="timelineTab" class="tabcontent">
+          <!-- Contenu de l'onglet Timeline -->
+          <div id="timeline">
+              <div></div>
+                <section>
+                  <div>
+                    <img src="https://cdn-icons-png.flaticon.com/512/566/566985.png" alt="Logo étudiant"/>
+                  </div>
+                  <div>
+                    <h2>BTS Télécommunication et réseaux - Année 2015</h2>
+                    <h3>C'est la partie de ma vie qui m'a initié au code. Hélas arrivé à la moitié de l'année, je n'avais aucun attrait pour les cours et j'ai décidé d'arrêter pour aller travailler.</h3>
+                  </div>
+                </section>
+                
+                <section>
+                  <div>
+                    <img src="https://www.cap-economie-portuaire.fr/media/eqiom__groupe_crh__061582600_1511_19122018.png" alt="Logo Eqiom"/>
+                  </div>
+                  <div>
+                    <h2>Eqiom - du 04/12/2017 au 02/07/2023</h2>
+                    <h3>C'est mon premier CDI, j'y ai travaillé comme ouvrier, m'occupant de gérer une installation de production de sacs de ciment.</h3>
+                  </div>
+                </section>
+                
+                <section>
+                  <div>
+                    <img src="https://s3-eu-west-1.amazonaws.com/tpd/logos/595cae450000ff0005a600d6/0x0.png" alt="Logo O'Clock"/>
+                  </div>
+                  <div>
+                    <h2>O'Clock - du 06/06/2023 au 17/11/2023</h2>
+                    <h3>C'est l'organisme de formation que j'ai choisi pour la formation développeur web et web mobile. Constituée d'un socle PHP, d'une spécialisation au choix entre REACT et Symfony et un mois de projet. Le passage de mon titre professionnel s'est déroulé le 12 janvier, il y a 6 à 8 semaines d'attente pour les résultats.</h3>
+                  </div>
+                </section>
+                  <section>
+                  <div>
+                    <img src="https://www.apformation.com/uploads/formations/7/84622b742d95996e228941ecdf8fb280_original.jpg" alt="Main qui touche du code"/>
+                  </div>
+                  <div>
+                    <h2>Concepteur développeur d'application</h2>
+                    <h3>Je souhaite avant tout poursuivre mes études, apprendre à toujours été pour moi un besoin. Le format en alternance est bénéfique pour moi, pouvoir m'investir dans un projet est quelque chose qui m'a permit de faire ressortir le meilleur de moi-même.</h3>
+                  </div>
+                </section>
+              </div>
+      </div>
+  </section>
 
     <footer>
         <div class="container">
             <p>&copy; 2024 Jacquot Jordan. Tous droits réservés.</p>
         </div>
         <section id="social" class="container">
-            <h2>Réseaux sociaux</h2>
+            <h2>Mes réseaux</h2>
             <div>
                 <a href="https://github.com/JordanJacquot" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/jordan-jacquot-pro" target="_blank"><i class="fab fa-linkedin"></i></a>

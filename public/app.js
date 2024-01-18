@@ -33,6 +33,24 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+// Ajoutez ce script à votre fichier app.js ou dans l'en-tête HTML
+function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].classList.remove("active");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.classList.add("active");
+}
+
+// Sélectionnez le premier onglet par défaut
+document.querySelector(".tablinks").click();
+
 
 
 
