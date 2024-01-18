@@ -252,6 +252,7 @@ h1 {
     flex: 1; /* Les onglets occupent toute la largeur disponible */
     text-align: center; /* Alignement du texte au centre */
     margin: 5px; /* Marge autour des onglets */
+    font-size: large;
 }
 
 .tabcontent {
@@ -304,3 +305,19 @@ h1, h2, h3, p, label, button {
     /* ... (autres styles pour cet onglet) ... */
 }
 
+/* Ajoutez ce style pour personnaliser le bouton */
+.download-btn {
+    background-color: #2e3b4e;
+    color: #fff;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.download-btn:hover {
+    background-color: #2980b9;
+}

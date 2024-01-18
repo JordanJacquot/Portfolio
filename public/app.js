@@ -51,6 +51,24 @@ function openTab(evt, tabName) {
 // Sélectionnez le premier onglet par défaut
 document.querySelector(".tablinks").click();
 
+// app.js
+
+function downloadCV() {
+    // Ajoutez le lien vers votre fichier PDF CV
+    var pdfUrl = './images/CV-Jordan-Jacquot.pdf';
+
+    // Créez un élément <a> et définissez ses attributs
+    var link = document.createElement('a');
+    link.href = pdfUrl;
+    link.download = 'CV_Jacquot_Jordan.pdf';
+
+    // Ajoutez l'élément <a> au DOM et déclenchez le téléchargement
+    document.body.appendChild(link);
+    link.click();
+
+    // Supprimez l'élément <a> du DOM
+    document.body.removeChild(link);
+}
 
 
 
